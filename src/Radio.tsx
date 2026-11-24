@@ -2,10 +2,14 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 const CHANNELS = [
   {
-    id: "",
-    name: "",
+    name: "Afrobank FM",
     audio: "",
-    image: ""
+    image: "/assets/radio-images/Afrobank.webp"
+  },
+  {
+    name: "Flash FM",
+    audio: "",
+    image: "/assets/radio-images/Flash.webp"
   }
 ]
 export default function Radio() {
@@ -25,15 +29,11 @@ export default function Radio() {
   return (
     <>
       <Splide options={slideOption} aria-label="My Favorite Images">
-        <SplideSlide>
-          <img src="image1.jpg" alt="Image 1"/>
-        </SplideSlide>
-        <SplideSlide>
-          <img src="image2.jpg" alt="Image 2"/>
-        </SplideSlide>
-        <SplideSlide>
-          <img src="image3.jpg" alt="Image 3"/>
-        </SplideSlide>
+        {CHANNELS.map((channel: { name: string, image: string }) => (
+          <SplideSlide>
+            <img src={channel.image} alt={channel.name} />
+          </SplideSlide>
+        ))}
       </Splide>
     </>
   )

@@ -38,10 +38,19 @@
 }
 
 .splide__slide {
-    transform: scale(0.75);
-    transition: transform 0.35s ease, opacity 0.35s ease;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
-.splide__slide.is-active {
-    transform: scale(1);
+.splide__slide img {
+    display: ;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+
+.splide__slide.is-active img{
+    border: solid 5px #FAFAFA;
 }
