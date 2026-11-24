@@ -1,8 +1,16 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
+const CHANNELS = [
+  {
+    id: "",
+    name: "",
+    audio: "",
+    image: ""
+  }
+]
 export default function Radio() {
   const slideOption = {
-    perPage: 3,
+    perPage: 5,
     perMove: 1,
     type: 'loop',
     keyboard: 'global',
